@@ -1,0 +1,40 @@
+package pasoporreferencia;
+
+public class PasoPorReferencia {
+    public static void main(String[] args) {
+
+        Persona1 p = new Persona1;
+        p.cambiarNombre("Juan");
+        imprimirNombre(p);//Imprime juan
+        modificarPersona(p);
+        imprimirNombre(p); //Imprime carlos
+
+        public static void modificarPersona(Persona1 arg){
+            arg.cambiarNombre("Carlos");
+
+        }
+
+        public static  void imprimirNombre(Persona1 p){
+            System.out.println("Valor recibido: "+ p.obtenerNombre());
+        }
+
+
+    }
+
+}
+
+clase 2
+
+package pasoporreferencia;
+
+public class Persona1 {
+    String nombre;
+
+    public void cambiarNombre(String nuevoNombre){
+        this.nombre=nuevoNombre;
+    }
+
+    public String obtenerNombre(){
+        return nombre;
+    }
+}
